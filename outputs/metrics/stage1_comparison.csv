@@ -1,0 +1,32 @@
+benchmark,model,scoring,auroc,bedroc,ef_0.005,ef_0.01,ef_0.05,n_targets,source,source_ref
+lit_pcba,DrugCLIP,cosine (continuous),0.583159,0.059833,6.6176,5.1754,2.1772,15,reproduced,drugclip_pcba_cosine_20260825_004540.csv
+lit_pcba,DrugCLIP,hamming (none),0.57803,0.056107,6.599,4.5657,2.2166,15,reproduced,drugclip_pcba_hamming_20260825_004551.csv
+lit_pcba,DrugCLIP,hamming (per_type),0.554687,0.031214,2.0393,2.108,1.622,15,reproduced,drugclip_pcba_hamming_per_type_20260825_125817.csv
+lit_pcba,DrugCLIP,hamming (per_type_median),0.540679,0.029045,2.8359,2.3277,1.1653,15,reproduced,drugclip_pcba_hamming_per_type_median_20260826_174109.csv
+lit_pcba,DrugCLIP,hamming (global),0.600576,0.059582,6.529,4.9074,2.2474,15,reproduced,drugclip_pcba_hamming_global_20260825_004612.csv
+lit_pcba,DrugCLIP,hamming (global_median),0.599107,0.062188,6.3334,4.8267,2.3944,15,reproduced,drugclip_pcba_hamming_global_median_20260826_174140.csv
+lit_pcba,SPRINT,cosine (continuous),0.725275,0.110609,13.7109,9.5537,5.1293,15,reproduced,lit_pcba_results_cosine_20260824_232705.csv
+lit_pcba,SPRINT,hamming (none),0.544242,0.041772,2.6373,3.4054,2.0796,15,reproduced,lit_pcba_results_hamming_20260824_233650.csv
+lit_pcba,SPRINT,hamming (per_type),0.666202,0.056218,4.4003,3.988,3.0712,15,reproduced,lit_pcba_results_hamming_per_type_20260825_130648.csv
+lit_pcba,SPRINT,hamming (per_type_median),0.520143,0.016113,1.2919,1.4861,1.0587,15,reproduced,lit_pcba_results_hamming_per_type_median_20260826_235432.csv
+lit_pcba,SPRINT,hamming (global),0.427381,0.019236,0.8177,1.1139,1.1577,15,reproduced,lit_pcba_results_hamming_global_20260824_235309.csv
+lit_pcba,SPRINT,hamming (global_median),0.35334,0.010722,1.0156,0.9666,0.3741,15,reproduced,lit_pcba_results_hamming_global_median_20260826_235624.csv
+lit_pcba,DrugCLIP,"DrugCLIP, published (own paper)",0.5717,0.0623,8.56,5.51,2.27,,paper,arXiv:2310.06367 Table 3
+lit_pcba,DrugCLIP,"DrugCLIP, retrained by DrugHash authors",0.5636,0.0678,7.77,5.66,2.32,,paper,arXiv:2407.19790 Table 2
+lit_pcba,DrugHash,"DrugHash, published",0.5458,0.0714,9.65,6.14,2.42,,paper,arXiv:2407.19790 Table 2
+lit_pcba,SPRINT (16M),"SPRINT (16M), published",0.734,0.123,15.9,10.78,5.29,,paper,arXiv:2411.15418 Table 2
+dude,DrugCLIP,cosine (continuous),0.807083,0.473313,36.4599,30.0027,10.3547,100,reproduced,drugclip_dude_cosine_20260825_150207.csv
+dude,DrugCLIP,hamming (none),0.791806,0.421677,32.5912,26.3957,9.4122,100,reproduced,drugclip_dude_hamming_20260825_150214.csv
+dude,DrugCLIP,hamming (per_type),0.788456,0.386907,28.9431,23.9931,8.9579,100,reproduced,drugclip_dude_hamming_per_type_20260825_150221.csv
+dude,DrugCLIP,hamming (per_type_median),0.788136,0.384941,28.78,23.7598,8.9445,100,reproduced,drugclip_dude_hamming_per_type_median_20260826_174154.csv
+dude,DrugCLIP,hamming (global),0.826056,0.446084,33.5957,28.0578,10.1215,100,reproduced,drugclip_dude_hamming_global_20260825_150228.csv
+dude,DrugCLIP,hamming (global_median),0.828044,0.448426,33.6299,28.134,10.209,100,reproduced,drugclip_dude_hamming_global_median_20260826_174214.csv
+dude,SPRINT,cosine (continuous),0.675885,0.069971,3.1665,3.344,2.7716,102,reproduced,sprint_dude_results_cosine_20260826_120525.csv
+dude,SPRINT,hamming (none),0.528506,0.051254,2.5411,2.2447,1.6518,102,reproduced,sprint_dude_results_hamming_20260826_122228.csv
+dude,SPRINT,hamming (per_type),0.553462,0.051206,2.1519,2.1482,1.9139,102,reproduced,sprint_dude_results_hamming_per_type_20260826_124015.csv
+dude,SPRINT,hamming (per_type_median),0.594727,0.038573,1.3229,1.37,1.6436,102,reproduced,sprint_dude_results_hamming_per_type_median_20260826_235721.csv
+dude,SPRINT,hamming (global),0.39891,0.021222,0.6203,0.7113,0.665,102,reproduced,sprint_dude_results_hamming_global_20260826_130116.csv
+dude,SPRINT,hamming (global_median),0.420079,0.022097,0.9967,0.877,0.7395,102,reproduced,sprint_dude_results_hamming_global_median_20260826_235817.csv
+dude,DrugCLIP,"DrugCLIP, retrained by DrugHash authors",0.7945,0.4782,37.86,30.76,10.1,,paper,arXiv:2407.19790 Table 1
+dude,DrugCLIP_ZS,"DrugCLIP_ZS, published",0.8093,0.5052,38.07,31.89,10.66,,paper,arXiv:2310.06367 Table 1
+dude,DrugHash,"DrugHash, published",0.8373,0.5716,43.03,37.18,12.07,,paper,arXiv:2407.19790 Table 1

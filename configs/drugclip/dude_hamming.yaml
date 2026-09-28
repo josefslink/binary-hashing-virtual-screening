@@ -1,0 +1,26 @@
+# DrugCLIP DUD-E: post-hoc binarized Hamming scoring of dumped encoder outputs.
+#
+# The dump is produced by scripts/dump_drugclip_embeddings.py --test-task DUDE, which
+# captures DrugCLIP's encoder outputs with forward hooks rather than by editing the
+# vendored repo (see docs/VENDOR_COMPAT.md). This config drives the scoring pass only.
+#
+# NOTE: every DUD-E target has exactly ONE pocket, so `binarize_center: per_type` hits
+# the single-row guard in binarize_pair for all 100 targets - the target side is left
+# uncentered and only the molecule side is centered. That is a legitimate condition, but
+# it is not the same operation as per_type on multi-pocket LIT-PCBA targets.
+repo_dir: third_party/drugclip
+checkpoint_path: checkpoints/drugclip/checkpoint_best.pt
+data_dir: data/drugclip
+results_dir: outputs/metrics/drugclip_dude
+embeddings_dir: outputs/metrics/drugclip_dude/embeddings
+output_prefix: drugclip_dude
+task: DUDE
+metric: hamming
+binarize_center: per_type
+target_protein_id: all
+batch_size: 4
+num_workers: 4
+max_pocket_atoms: 256
+fp16: true
+seed: 1
+device: 0

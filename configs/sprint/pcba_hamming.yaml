@@ -1,0 +1,9 @@
+checkpoint_path: checkpoints/sprint_official/sprint.ckpt
+dataset: lit_pcba
+pcba_dir: data/lit_pcba
+metric: hamming
+binarize_center: per_type
+target_protein_id: all
+batch_size: 64
+num_workers: 0
+device: 0

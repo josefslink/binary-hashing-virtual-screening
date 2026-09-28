@@ -1,0 +1,102 @@
+# ---------------------------------------------------------------------------
+# Large inputs. Not in git; see the README for how to obtain them.
+# data/ is ~190 GB and checkpoints/ ~7 GB.
+# ---------------------------------------------------------------------------
+data/
+checkpoints/
+*.pt
+*.zip
+tmp/
+third_party/sprint/benchmark_mpp/
+
+# The two rules above match at ANY depth, which once silently excluded three
+# *source* directories inside the vendored repos, including unimol/data/ and
+# unicore/data/ which third_party/drugclip/unimol/tasks/drugclip.py imports.
+# A checkout from git alone was then not runnable. Re-include them explicitly;
+# the directory itself has to be negated, because git cannot re-include a file
+# underneath an excluded directory.
+!third_party/drugclip/unimol/data/
+!third_party/uni-core/unicore/data/
+!third_party/sprint/checkpoints/
+third_party/sprint/checkpoints/*.ckpt
+
+# data/ also swallowed third_party/sprint/data/, and with it the download scripts
+# the README names as the way to obtain the benchmarks. Do NOT re-include that
+# directory to get them back: SPRINT ships its own .gitignore whose line 27 is
+# `!data/**/*.tsv`, a nested rule that outranks this file, so un-excluding the
+# directory drags in 204 DUD-E tables and about 110 MB. The directory stays
+# ignored and the three scripts are tracked by an explicit `git add -f`.
+
+# ---------------------------------------------------------------------------
+# Python environments and build artefacts
+# ---------------------------------------------------------------------------
+.venv/
+.venv_drugclip/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Results: tracked selectively. Everything under outputs/ is ignored except the
+# metrics CSVs and the summary figures, which are the experimental evidence the
+# report cites by filename.
+# ---------------------------------------------------------------------------
+outputs/*
+!outputs/metrics/
+outputs/metrics/*
+!outputs/metrics/*.csv
+# The trained-head sweep writes one CSV per (lambda, centering) into a
+# subdirectory; outputs/metrics/* would exclude that directory before the
+# *.csv rule above is ever reached.
+!outputs/metrics/drugclip_dude_heads/
+!outputs/metrics/drugclip_dude_heads/*.csv
+!outputs/visualizations/
+outputs/visualizations/*
+!outputs/visualizations/*.png
+# Artefacts behind the leakage table, the truncation table and the lambda sweep.
+# Without these three the audit script cannot run from a fresh clone.
+!outputs/metrics/*.json
+!outputs/metrics/sprint_truncation/
+!outputs/metrics/sprint_truncation/*.csv
+!outputs/drughash/
+outputs/drughash/*
+!outputs/drughash/heads/
+outputs/drughash/heads/*
+!outputs/drughash/heads/sweep_summary.json
+
+# ---------------------------------------------------------------------------
+# LaTeX intermediates, anywhere. The .tex sources, the figures and the built
+# PDFs are tracked; everything a compiler regenerates is not.
+# ---------------------------------------------------------------------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+docs/report/build/
+
+# docs/report/report.log and friends are covered by *.log below.
+
+# ---------------------------------------------------------------------------
+# Editor and tooling directories
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.log
+
+# Scratch and editor leftovers
+*.swp
+*~
+.DS_Store
+
+# Superseded draft of the report, kept on disk but not published;
+# docs/report/ is the live one.
+docs/practical_work_report/

@@ -1,0 +1,14 @@
+# SPRINT LIT-PCBA: score a dumped embedding directory instead of re-running the model.
+#
+# The dump comes from `scripts/dump_sprint_embeddings.py --dataset lit_pcba`; this config
+# drives `scripts/evaluate_drugclip_hamming.py`, which is model-agnostic (it only needs the
+# <target>/{mol_reps,pocket_reps,labels}.npy contract).
+#
+# alpha MUST be 85.0 here. Every SPRINT row in the report uses the 85.0 BEDROC
+# default; DrugCLIP rows use 80.5. Mixing them corrupts only the BEDROC column, silently.
+embeddings_dir: outputs/metrics/sprint_pcba/embeddings
+output_prefix: lit_pcba_results
+alpha: 85.0
+metric: hamming
+binarize_center: per_type
+target_protein_id: all

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bachelor-experiments"
+version = "0.1.0"
+description = "Binary hashing for protein-ligand virtual screening (Practical Work, BSc AI)"
+authors = [
+    { name = "Josef" }
+]
+requires-python = ">=3.9"
+# Everything src/ and scripts/ import directly. wandb was listed here for a while
+# and nothing ever imported it. scikit-learn, rdkit, lmdb and tqdm were imported
+# without being declared, so a fresh environment failed on the first run.
+dependencies = [
+    "torch",
+    "pandas",
+    "numpy",
+    "pytorch-lightning",
+    "matplotlib",
+    "scikit-learn",
+    "rdkit",
+    "lmdb",
+    "tqdm",
+    "PyYAML"
+]
+
+[project.optional-dependencies]
+# `pip install -e .[dev]` in .venv. Only needed to run tests/.
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["src", "src.*", "scripts", "scripts.*"]

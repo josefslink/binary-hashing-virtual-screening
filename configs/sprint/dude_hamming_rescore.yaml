@@ -1,0 +1,14 @@
+# SPRINT DUD-E: score a dumped embedding directory instead of re-running the model.
+# Dump: `scripts/dump_sprint_embeddings.py --dataset dude`.
+#
+# alpha MUST be 85.0 (see configs/sprint/pcba_hamming_rescore.yaml).
+#
+# NOTE: every DUD-E target has exactly ONE sequence, so `per_type`/`per_type_median` hit the
+# single-row guard on all 102 - only the molecule side is centered. That is a legitimate
+# condition but not the same operation as per_type on a multi-pocket LIT-PCBA target.
+embeddings_dir: outputs/metrics/sprint_dude/embeddings
+output_prefix: sprint_dude_results
+alpha: 85.0
+metric: hamming
+binarize_center: per_type
+target_protein_id: all

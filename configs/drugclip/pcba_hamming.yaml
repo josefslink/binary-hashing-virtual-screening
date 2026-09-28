@@ -1,0 +1,22 @@
+# DrugCLIP LIT-PCBA with binarized embeddings scored by Hamming similarity.
+#
+# Drives the scoring pass (scripts/evaluate_drugclip_hamming.py). The dump it scores is
+# produced by scripts/dump_drugclip_embeddings.py --test-task PCBA, which captures
+# DrugCLIP's encoder outputs with forward hooks rather than by editing the vendored repo
+# (third_party/ is a pristine upstream checkout - see docs/VENDOR_COMPAT.md).
+repo_dir: third_party/drugclip
+checkpoint_path: checkpoints/drugclip/checkpoint_best.pt
+data_dir: data/drugclip
+results_dir: outputs/metrics/drugclip_pcba
+output_prefix: drugclip_pcba
+embeddings_dir: outputs/metrics/drugclip_pcba/embeddings
+task: PCBA
+metric: hamming
+binarize_center: per_type
+target_protein_id: all
+batch_size: 8
+num_workers: 8
+max_pocket_atoms: 511
+fp16: true
+seed: 1
+device: 0

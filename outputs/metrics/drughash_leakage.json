@@ -1,0 +1,488 @@
+{
+  "train_ligands": 13589,
+  "benchmarks": {
+    "dude": {
+      "actives": 22805,
+      "leaked": 583,
+      "pct": 2.556,
+      "per_target": {
+        "aa2ar": {
+          "actives": 482,
+          "leaked": 1
+        },
+        "abl1": {
+          "actives": 182,
+          "leaked": 18
+        },
+        "ace": {
+          "actives": 282,
+          "leaked": 5
+        },
+        "aces": {
+          "actives": 453,
+          "leaked": 3
+        },
+        "ada17": {
+          "actives": 532,
+          "leaked": 7
+        },
+        "ada": {
+          "actives": 93,
+          "leaked": 8
+        },
+        "adrb1": {
+          "actives": 247,
+          "leaked": 2
+        },
+        "adrb2": {
+          "actives": 231,
+          "leaked": 2
+        },
+        "akt1": {
+          "actives": 293,
+          "leaked": 8
+        },
+        "akt2": {
+          "actives": 117,
+          "leaked": 10
+        },
+        "aldr": {
+          "actives": 159,
+          "leaked": 2
+        },
+        "ampc": {
+          "actives": 48,
+          "leaked": 5
+        },
+        "andr": {
+          "actives": 269,
+          "leaked": 7
+        },
+        "aofb": {
+          "actives": 122,
+          "leaked": 0
+        },
+        "bace1": {
+          "actives": 283,
+          "leaked": 15
+        },
+        "braf": {
+          "actives": 152,
+          "leaked": 6
+        },
+        "cah2": {
+          "actives": 492,
+          "leaked": 26
+        },
+        "casp3": {
+          "actives": 199,
+          "leaked": 1
+        },
+        "cdk2": {
+          "actives": 474,
+          "leaked": 23
+        },
+        "comt": {
+          "actives": 41,
+          "leaked": 1
+        },
+        "cp2c9": {
+          "actives": 120,
+          "leaked": 1
+        },
+        "cp3a4": {
+          "actives": 170,
+          "leaked": 1
+        },
+        "csf1r": {
+          "actives": 166,
+          "leaked": 8
+        },
+        "cxcr4": {
+          "actives": 40,
+          "leaked": 0
+        },
+        "def": {
+          "actives": 102,
+          "leaked": 4
+        },
+        "dhi1": {
+          "actives": 330,
+          "leaked": 1
+        },
+        "dpp4": {
+          "actives": 533,
+          "leaked": 11
+        },
+        "drd3": {
+          "actives": 480,
+          "leaked": 2
+        },
+        "dyr": {
+          "actives": 231,
+          "leaked": 3
+        },
+        "egfr": {
+          "actives": 542,
+          "leaked": 3
+        },
+        "esr1": {
+          "actives": 383,
+          "leaked": 9
+        },
+        "esr2": {
+          "actives": 367,
+          "leaked": 11
+        },
+        "fa10": {
+          "actives": 537,
+          "leaked": 13
+        },
+        "fa7": {
+          "actives": 114,
+          "leaked": 3
+        },
+        "fabp4": {
+          "actives": 47,
+          "leaked": 6
+        },
+        "fak1": {
+          "actives": 100,
+          "leaked": 6
+        },
+        "fgfr1": {
+          "actives": 139,
+          "leaked": 9
+        },
+        "fkb1a": {
+          "actives": 111,
+          "leaked": 0
+        },
+        "fnta": {
+          "actives": 592,
+          "leaked": 1
+        },
+        "fpps": {
+          "actives": 85,
+          "leaked": 0
+        },
+        "gcr": {
+          "actives": 258,
+          "leaked": 2
+        },
+        "glcm": {
+          "actives": 54,
+          "leaked": 0
+        },
+        "gria2": {
+          "actives": 158,
+          "leaked": 3
+        },
+        "grik1": {
+          "actives": 101,
+          "leaked": 9
+        },
+        "hdac2": {
+          "actives": 185,
+          "leaked": 3
+        },
+        "hdac8": {
+          "actives": 170,
+          "leaked": 2
+        },
+        "hivint": {
+          "actives": 100,
+          "leaked": 4
+        },
+        "hivpr": {
+          "actives": 536,
+          "leaked": 5
+        },
+        "hivrt": {
+          "actives": 338,
+          "leaked": 8
+        },
+        "hmdh": {
+          "actives": 170,
+          "leaked": 3
+        },
+        "hs90a": {
+          "actives": 88,
+          "leaked": 6
+        },
+        "hxk4": {
+          "actives": 92,
+          "leaked": 0
+        },
+        "igf1r": {
+          "actives": 148,
+          "leaked": 6
+        },
+        "inha": {
+          "actives": 43,
+          "leaked": 1
+        },
+        "ital": {
+          "actives": 138,
+          "leaked": 2
+        },
+        "jak2": {
+          "actives": 107,
+          "leaked": 9
+        },
+        "kif11": {
+          "actives": 116,
+          "leaked": 8
+        },
+        "kit": {
+          "actives": 166,
+          "leaked": 20
+        },
+        "kith": {
+          "actives": 57,
+          "leaked": 0
+        },
+        "kpcb": {
+          "actives": 135,
+          "leaked": 3
+        },
+        "lck": {
+          "actives": 420,
+          "leaked": 21
+        },
+        "lkha4": {
+          "actives": 171,
+          "leaked": 5
+        },
+        "mapk2": {
+          "actives": 101,
+          "leaked": 6
+        },
+        "mcr": {
+          "actives": 94,
+          "leaked": 3
+        },
+        "met": {
+          "actives": 166,
+          "leaked": 5
+        },
+        "mk01": {
+          "actives": 79,
+          "leaked": 7
+        },
+        "mk10": {
+          "actives": 104,
+          "leaked": 11
+        },
+        "mk14": {
+          "actives": 578,
+          "leaked": 16
+        },
+        "mmp13": {
+          "actives": 572,
+          "leaked": 12
+        },
+        "mp2k1": {
+          "actives": 121,
+          "leaked": 4
+        },
+        "nos1": {
+          "actives": 100,
+          "leaked": 0
+        },
+        "nram": {
+          "actives": 98,
+          "leaked": 4
+        },
+        "pa2ga": {
+          "actives": 99,
+          "leaked": 2
+        },
+        "parp1": {
+          "actives": 508,
+          "leaked": 14
+        },
+        "pde5a": {
+          "actives": 398,
+          "leaked": 1
+        },
+        "pgh1": {
+          "actives": 195,
+          "leaked": 4
+        },
+        "pgh2": {
+          "actives": 435,
+          "leaked": 5
+        },
+        "plk1": {
+          "actives": 107,
+          "leaked": 8
+        },
+        "pnph": {
+          "actives": 103,
+          "leaked": 0
+        },
+        "ppara": {
+          "actives": 373,
+          "leaked": 8
+        },
+        "ppard": {
+          "actives": 240,
+          "leaked": 3
+        },
+        "pparg": {
+          "actives": 484,
+          "leaked": 6
+        },
+        "prgr": {
+          "actives": 293,
+          "leaked": 2
+        },
+        "ptn1": {
+          "actives": 130,
+          "leaked": 4
+        },
+        "pur2": {
+          "actives": 50,
+          "leaked": 2
+        },
+        "pygm": {
+          "actives": 77,
+          "leaked": 7
+        },
+        "pyrd": {
+          "actives": 111,
+          "leaked": 0
+        },
+        "reni": {
+          "actives": 104,
+          "leaked": 1
+        },
+        "rock1": {
+          "actives": 100,
+          "leaked": 2
+        },
+        "rxra": {
+          "actives": 131,
+          "leaked": 2
+        },
+        "sahh": {
+          "actives": 63,
+          "leaked": 0
+        },
+        "src": {
+          "actives": 524,
+          "leaked": 17
+        },
+        "tgfr1": {
+          "actives": 133,
+          "leaked": 3
+        },
+        "thb": {
+          "actives": 103,
+          "leaked": 4
+        },
+        "thrb": {
+          "actives": 461,
+          "leaked": 18
+        },
+        "try1": {
+          "actives": 449,
+          "leaked": 11
+        },
+        "tryb1": {
+          "actives": 148,
+          "leaked": 0
+        },
+        "tysy": {
+          "actives": 109,
+          "leaked": 3
+        },
+        "urok": {
+          "actives": 162,
+          "leaked": 8
+        },
+        "vgfr2": {
+          "actives": 409,
+          "leaked": 9
+        },
+        "wee1": {
+          "actives": 102,
+          "leaked": 2
+        },
+        "xiap": {
+          "actives": 100,
+          "leaked": 7
+        }
+      }
+    },
+    "lit_pcba": {
+      "actives": 9954,
+      "leaked": 36,
+      "pct": 0.362,
+      "per_target": {
+        "ADRB2": {
+          "actives": 17,
+          "leaked": 0
+        },
+        "ALDH1": {
+          "actives": 7145,
+          "leaked": 4
+        },
+        "ESR1_ago": {
+          "actives": 13,
+          "leaked": 1
+        },
+        "ESR1_ant": {
+          "actives": 88,
+          "leaked": 4
+        },
+        "FEN1": {
+          "actives": 360,
+          "leaked": 3
+        },
+        "GBA": {
+          "actives": 164,
+          "leaked": 4
+        },
+        "IDH1": {
+          "actives": 39,
+          "leaked": 0
+        },
+        "KAT2A": {
+          "actives": 194,
+          "leaked": 1
+        },
+        "MAPK1": {
+          "actives": 308,
+          "leaked": 4
+        },
+        "MTORC1": {
+          "actives": 97,
+          "leaked": 0
+        },
+        "OPRK1": {
+          "actives": 24,
+          "leaked": 0
+        },
+        "PKM2": {
+          "actives": 546,
+          "leaked": 0
+        },
+        "PPARG": {
+          "actives": 24,
+          "leaked": 2
+        },
+        "TP53": {
+          "actives": 64,
+          "leaked": 5
+        },
+        "VDR": {
+          "actives": 871,
+          "leaked": 8
+        }
+      }
+    }
+  },
+  "target_side": "not checked - no DUD-E to PDB mapping available offline"
+}
